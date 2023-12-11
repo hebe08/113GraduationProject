@@ -1,0 +1,432 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('../font/MengNaChaoGangHei-1.otf') format('truetype'); /* 字體檔案的路徑和格式 */
+    /* 可選：你也可以提供其他格式的字體，以確保跨瀏覽器的兼容性 */
+}
+*{
+    font-family: 'MyCustomFont', sans-serif;
+}
+header{
+    background-color: rgba(194, 226, 254, 0.648);
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+    transition: top 0.3s ease;
+    top: -100px;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+}
+.nav div{
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+}
+.nav  li{
+    margin: 0px 10px 0px 10px;
+}
+.nav  li  a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 5px 0px 5px;
+}
+.nav-item.project > a{
+    text-align: center;
+    height: 66px;
+    line-height: 50px;
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+}
+.icon{
+    background: url(../image/畢展主視覺標題文字.png);
+    width: 120px;
+    height: 70px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.iconR{
+    width: 65px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.iconR.yt{
+    background-image: url(../image/yt.png);
+}
+.iconR.fb{
+    background-image: url(../image/fb.png);
+}
+.iconR.ig{
+    background-image: url(../image/ig.png);
+}
+
+.all{
+    height: 1000px;
+    width: 100%;
+    background-image: url(../image/bg.png);
+    background-size: cover;
+}
+/*#s1{
+    height: 2200px;
+    width: 100%;
+    background-image: url(../image/封面背景.png);
+    background-size: cover;
+}*/
+#s1 {
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+    /* background-image: url(../image/BG_封面.png);
+    background-size: cover;
+    background-repeat: no-repeat; */
+}
+#bg1 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* transition: top 2s ease; 滑動速度和效果調整 */
+    z-index: -1;
+    
+}
+.icon.big{
+    position: absolute;
+    width: 550px;
+    height: 350px;
+    top: 1vh;
+    right: 160px;
+}
+.iconR.ig.content{
+    position: absolute;
+    right: 220px;
+    top: 43vh;
+    width: 110px;
+    height: 100px;
+}
+.iconR.fb.content{
+    position: absolute;
+    right: 380px;
+    top: 52vh;
+    width: 110px;
+    height: 100px;
+}
+.circle{
+    position: absolute;
+    width: 200px;
+    height:200px;
+    top: 63vh;
+    right: 210px;
+    border-radius: 50%;
+    background-color: rgb(26, 26, 82);
+}
+.video{
+    position: absolute;
+    top: 48vh;
+    left: 250px;
+}
+#s2{
+    width: 100%;
+    height: auto;
+    background-image: url(../image/BG2.png);
+    background-size: cover;
+    /* box-shadow:0 10px 20px 10px rgb(255, 255, 255) inset; */
+    display: flex;
+}
+.left{
+    height: auto;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 300px;
+    /* border-right: ; */
+}
+.right{
+    height: 100%;
+    width: 75%;
+}
+.left > div{
+    position: sticky;
+    top: 300px;
+    text-align: center;
+}
+.left > div a{
+    font-size: 30px;
+    font-family: 'MyCustomFont', sans-serif;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    color: white;
+}
+.left a:hover{
+    text-decoration: underline;
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 100px;
+}.cards > div{
+    margin: 40px;
+    /* filter: drop-shadow(2px 2px 10px white); */
+    border: solid 6px white;
+    border-radius: 10%;
+}
+.cards > div img{
+    width: 190px;
+    height: 190px;
+    border-radius: 10%;
+}
+
+.cards div:hover img{
+    opacity: 0.4;
+    transition-duration: 0.5s;
+}
+.cards div:hover{
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+.cards div:hover::after{
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+.cards > div::after{
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    color: rgb(255, 255, 255);
+    opacity: 0;
+    letter-spacing: 3px;
+    top: 70px;
+}
+.cards > div::before{
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 3px;
+    top: 105px;
+    opacity: 0;
+}
+.cards > div:nth-child(1)::after{
+    content: 'TCG藝術家';
+    left: 31px;
+    font-size: 22px;
+}
+.cards > div:nth-child(1)::before{
+    content: '#藝術家 #TCG卡牌';
+    left: 28px;
+    font-size: 12px;
+}
+.cards > div:nth-child(2)::after{
+    content: '你來See SEA';
+    left: 16px;
+    font-size: 20px;
+}
+.cards > div:nth-child(2)::before{
+    content: '#東南亞 #遊戲';
+    left: 40px;
+    font-size: 12px;
+    top: 102px;
+}
+.cards > div:nth-child(3)::after{
+    content: 'Rootkit';
+    left: 36px;
+    top: 67px;
+    font-size: 26px;
+}
+.cards > div:nth-child(3)::before{
+    content: '#解謎遊戲 #駭客';
+    left: 38px;
+    font-size: 12px;
+}
+.cards > div:nth-child(4)::after{
+    content: '水落石出';
+    left: 38px;
+    top: 67px;
+    font-size: 27px;
+}
+.cards > div:nth-child(4)::before{
+    content: '#實境解謎 #化石知識';
+    left: 22px;
+    top: 107px;
+    font-size: 12px;
+}
+.cards > div:nth-child(5)::after{
+    content: '甲蟲大小飼';
+    left: 25px;
+    top: 67px;
+    font-size: 26px;
+}
+.cards > div:nth-child(5)::before{
+    content: '#甲蟲電子書 #新手入門須知';
+    left: 7px;
+    top: 107px;
+    font-size: 11px;
+}
+.cards > div:nth-child(6)::after{
+    content: 'HTH';
+    left: 65px;
+    top: 67px;
+    font-size: 27px;
+}
+.cards > div:nth-child(6)::before{
+    content: '#橫幅2D遊戲 #家庭關係';
+    left: 14px;
+    top: 107px;
+    font-size: 11px;
+}
+.cards > div:nth-child(7)::after{
+    content: 'ChemIsTry';
+    left: 20px;
+    font-size: 22px;
+}
+.cards > div:nth-child(7)::before{
+    content: '#數位教材 #化學網頁';
+    left: 20px;
+    font-size: 12px;
+}
+.cards > div:nth-child(8)::after{
+    content: '最後的島嶼';
+    left: 26px;
+    top: 67px;
+    font-size: 26px;
+}
+.cards > div:nth-child(8)::before{
+    content: '#桌遊 #全球暖化';
+    left: 37px;
+    top: 107px;
+    font-size: 12px;
+}
+.cards > div:nth-child(9)::after{
+    content: '海洋文明的嘆息';
+    left: 16px;
+    font-size: 20px;
+}
+.cards > div:nth-child(9)::before{
+    content: '#海洋汙染 #橫向RPG遊戲';
+    left: 12px;
+    font-size: 11px;
+}
+.cards > div:nth-child(10)::after{
+    content: '祈虎';
+    left: 65px;
+    top: 67px;
+    font-size: 27px;
+}
+.cards > div:nth-child(10)::before{
+    content: '#民間信仰 #本土文化';
+    left: 22px;
+    top: 107px;
+    font-size: 12px;
+}
+.cards > div:nth-child(11)::after{
+    content: '噓你貨幣';
+    left: 38px;
+    top: 67px;
+    font-size: 27px;
+}
+.cards > div:nth-child(11)::before{
+    content: '#虛擬貨幣 #動畫影片';
+    left: 22px;
+    top: 107px;
+    font-size: 12px;
+}
+.cards > div:nth-child(12)::after{
+    content: '漫步雲端';
+    left: 38px;
+    top: 67px;
+    font-size: 27px;
+}
+.cards > div:nth-child(12)::before{
+    content: '#360環景 #多媒體互動平台';
+    left: 5px;
+    top: 107px;
+    font-size: 11px;
+}
+.cards div:hover::after{
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+.cards div:hover::before{
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+.intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.intro img{
+    width: 80%;
+}
+.exhibit{
+    padding: 100px;
+}
+.inner{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.exhtext{
+    display: flex;
+    justify-content: start;
+    align-items: flex-end;
+    flex-direction: row;
+    width: 100%;
+}
+.exhtext > div:first-child{
+    margin-right: 20px;
+}
+.exhtext h1{
+    color: rgb(247, 216, 78);
+    font-size: 110px;
+}
+.exhtext h2{
+    color: white;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+.exhtext a{
+    text-decoration: none;
+}
+.innerPho img{
+    width: 100%;   
+}
+.detail > div{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 8px;
+    text-align: center;
+}
+.detail img{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
