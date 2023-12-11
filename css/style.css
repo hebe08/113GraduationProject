@@ -68,31 +68,18 @@ header{
     background-image: url(../image/bg.png);
     background-size: cover;
 }
-/*#s1{
-    height: 2200px;
-    width: 100%;
-    background-image: url(../image/封面背景.png);
+.bgAll{
+    background-image: url(../image/長條圖（封面連下半部）.png);
     background-size: cover;
-}*/
+}
 #s1 {
     width: 100%;
     height: 700px;
     overflow: hidden;
     position: relative;
-    /* background-image: url(../image/BG_封面.png);
-    background-size: cover;
-    background-repeat: no-repeat; */
-}
-#bg1 {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    /* transition: top 2s ease; 滑動速度和效果調整 */
-    z-index: -1;
     
 }
+
 .icon.big{
     position: absolute;
     width: 550px;
@@ -131,9 +118,8 @@ header{
 #s2{
     width: 100%;
     height: auto;
-    background-image: url(../image/BG2.png);
-    background-size: cover;
-    /* box-shadow:0 10px 20px 10px rgb(255, 255, 255) inset; */
+    /* background-image: url(../image/BG2.png);
+    background-size: cover; */
     display: flex;
 }
 .left{
