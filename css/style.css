@@ -75,16 +75,14 @@ header{
 #s1 {
     width: 100%;
     height: 700px;
-    overflow: hidden;
-    position: relative;
     
 }
 
 .icon.big{
     position: absolute;
     width: 550px;
-    height: 350px;
-    top: 1vh;
+    height: 300px;
+    top: 0;
     right: 160px;
 }
 .iconR.ig.content{
@@ -96,10 +94,15 @@ header{
 }
 .iconR.fb.content{
     position: absolute;
-    right: 380px;
-    top: 52vh;
+    right: 100px;
+    top: 53vh;
     width: 110px;
     height: 100px;
+}
+.videoBG img{
+    position: absolute;
+    top: 9.5vh;
+    width: 69%;
 }
 .circle{
     position: absolute;
@@ -112,8 +115,8 @@ header{
 }
 .video{
     position: absolute;
-    top: 48vh;
-    left: 250px;
+    top: 46.5vh;
+    left: 27vw;
 }
 #s2{
     width: 100%;
@@ -155,7 +158,8 @@ header{
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 100px;
-}.cards > div{
+}
+.cards > div{
     margin: 40px;
     /* filter: drop-shadow(2px 2px 10px white); */
     border: solid 6px white;
@@ -197,6 +201,37 @@ header{
     top: 105px;
     opacity: 0;
 }
+/* ttt */
+.cards > a > div{
+    margin: 40px;
+    /* filter: drop-shadow(2px 2px 10px white); */
+    border: solid 6px white;
+    border-radius: 10%;
+}
+.cards > a > div img{
+    width: 190px;
+    height: 190px;
+    border-radius: 10%;
+}
+.cards > a > div::after{
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    color: rgb(255, 255, 255);
+    opacity: 0;
+    letter-spacing: 3px;
+    top: 70px;
+}
+.cards > a > div::before{
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    color: rgb(255, 255, 255);
+    letter-spacing: 3px;
+    top: 105px;
+    opacity: 0;
+}
+/* ttt */
 .cards > div:nth-child(1)::after{
     content: 'TCG藝術家';
     left: 31px;
@@ -218,13 +253,13 @@ header{
     font-size: 12px;
     top: 102px;
 }
-.cards > div:nth-child(3)::after{
+.cards > a > div::after{
     content: 'Rootkit';
     left: 36px;
     top: 67px;
     font-size: 26px;
 }
-.cards > div:nth-child(3)::before{
+.cards > a > div::before{
     content: '#解謎遊戲 #駭客';
     left: 38px;
     font-size: 12px;
@@ -341,6 +376,18 @@ header{
     opacity: 1;
     transition-duration: 0.5s;
 }
+
+/* ttt */
+.cards > a > div:hover::after{
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+.cards > a > div:hover::before{
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+/* ttt */
+
 .intro{
     display: flex;
     justify-content: center;
@@ -351,6 +398,7 @@ header{
 }
 .exhibit{
     padding: 100px;
+    padding-bottom: 150px;
 }
 .inner{
     display: flex;
@@ -394,6 +442,17 @@ header{
     width: 25px;
     height: 25px;
     margin-right: 10px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
+footer p{
+    margin: 0;
+    padding-bottom: 20px;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 12px;
 }
 .swiper {
     width: 100%;
