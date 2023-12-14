@@ -2,7 +2,7 @@ header{
     top: 0;
 }
 .bgAll{
-    padding-top: 200px;
+    padding-top: 160px;
     background-image: url(../image/BG2.png);
 }
 .content{
@@ -10,48 +10,86 @@ header{
     display: flex;
     padding-bottom: 100px;
 }
+.icons{
+    width: 20%;
+}
 .leftIcon{
-    width: 10%;
+    position: sticky;
+    top: 250px;
     display: flex;
-    justify-content: end;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
     
+}
+.leftIcon > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5px;
 }
 .leftIcon img{
     width: 100px;
     height: 100px;
-    position: sticky;
-    top: 240px;
+    
+}
+.leftIcon img:hover{
+    /* box-shadow: 0 0 20px 10px rgb(255, 255, 255); */
+    filter: drop-shadow(0px 0px 20px #ffffff87);
+    border-radius: 20px;
+    transition-duration: 0.3s;
 }
 .rightContent{
-    width: 90%;
+    width: 80%;
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 0px 100px 0px 200px;
+    padding: 0px 100px 0px 100px;
 }
+
 .topped{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.topText{
     width: 100%;
 }
 .hashtag{
-    margin-left: 32vw;
+    /* margin-left: 29vw; */
     color: white;
+    display: flex;
+    justify-content: end;
+    width: 100%;
+    padding-right: 10px;
 }
 .member{
-    margin-left: 1vw;
+    /* margin-left: 5vw; */
     color: white;
-    margin-top: 30px;
+    margin-top: 25px;
     display: flex;
+    justify-content: start;
+    padding-left: 3vw;
+    flex-wrap: wrap;
+    width: 100%;
 }
 .member p{
-    margin-right: 50px;
+    margin-right: 45px;
+}
+.name{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .nameBlock{
-    width: 70%;
+    width: 100%;
     height: 150px;
     background-color: white;
-    border-radius: 40px;
+    border-radius: 40px 0px 0px 40px;
     /* margin-left: 10vw; */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -59,17 +97,20 @@ header{
     color: rgb(34, 34, 58);
     letter-spacing: 3px;
     font-size: 70px;
+    text-align: center;
+    margin-left: 30px;
 }
 .photoBlock{
-    top: 150px;
-    left: 65vw;
-    position: absolute;
+    /* top: 150px; */
+    /* right: 10vw; */
+    /* position: absolute; */
+    margin-bottom: 50px;
 }
 .photoBlock img{
     width: 300px;
     height: 300px;
     border-radius: 40px;
-    border: solid 2px white;
+    border: solid 4px white;
 }
 .projectCon{
     display: flex;
@@ -84,12 +125,40 @@ header{
     font-size: 20px;
 }
 .projectCon h2{
-    margin-top: 50px;
+    margin-top: 60px;
     margin-bottom: 20px;
-    color: rgb(14, 14, 25);
+    color: rgb(247, 216, 78);
+    /* text-shadow: -1px -1px 0 #2d2a8187,
+              1px -1px 0 #2d2a8187,
+              -1px 1px 0 #2d2a8187,
+              1px 1px 0 #2d2a8187; */
 }
 .projectCon img{
     width: 100%;
+    margin-bottom: 40px;
+}
+@media screen and (max-width: 1150px){
+    .content{
+        flex-direction: column-reverse;
+        padding-bottom: 50px;
+    }
+    .rightContent{
+        width: 100%;
+        padding: 0px 100px 0px 100px;
+    }
+    .icons{
+        width: 100%;
+    }
+    .leftIcon{
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .leftIcon > div{
+        margin: 0px 10px 0px 10px;
+    }
+    
 }
 .memberInfo{
     padding: 100px 50px 60px 50px;
@@ -99,6 +168,14 @@ header{
     justify-content: space-between;
     letter-spacing: 1px;
 }
+.info{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 100%;
+}
+
 .column{
     display: flex;
     flex-direction: column;
@@ -113,7 +190,7 @@ header{
 }
 .memberdown p{
     color: rgba(42, 42, 67, 0.468);
-    
+    display: flex;
 }
 .memberdown h3{
     margin-bottom: 20px;
@@ -138,6 +215,30 @@ header{
     display: flex;
     flex-direction: row;
 }
+@media screen and (max-width: 987px){
+    .member{
+        flex-direction: column;
+    }
+    .photoBlock img{
+        width: 200px;
+        height: 200px;
+    }
+    .nameBlock{
+        height: 100px;
+    }
+    .nameBlock h1{
+        font-size: 45px;
+    }
+    .bgAll{
+        padding-top: 180px;
+    }
+    .member p, .hashtag p{
+        font-size: 15px;
+    }
+    .projectCon p{
+        font-size: 18px;
+    }
+}
 .page{
     display: flex;
     align-items: center;
@@ -154,9 +255,25 @@ header{
     transform: translateX(20px);
     transition-duration: 0.3s;
 }
+@media screen and (max-width: 1193px) {
+    .info{
+        flex-direction: column;
+        
+    }
+    .column{
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 900px){
+    .page img{
+        width: 80px;
+        height: 80px;
+    }
+}
 .footer{
     display: flex;
     background-color: rgba(255, 255, 255, 0.797);
+    border: none;
 }
 .footer p{
     color: rgb(25, 25, 36);
@@ -184,20 +301,4 @@ header{
     opacity: 1;
     transition-duration: 0.3s;
 }
-/* .toTop-arrow::before, .toTop-arrow::after {
-	width: 25px;
-	height: 6px;
-	border-radius: 3px;
-	background: #f90;
-	position: absolute;
-	content: "";
-}
-.toTop-arrow::before {
-	transform: rotate(-45deg) translate(0, -50%);
-	left: 0.42rem;
-}
-.toTop-arrow::after {
-	transform: rotate(45deg) translate(0, -50%);
-	right: 0.42rem;
-} */
 .toTop-arrow:focus {outline: none;}
