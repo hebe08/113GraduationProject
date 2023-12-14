@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'MyCustomFont';
-    src: url('../font/MengNaChaoGangHei-1.otf') format('opentype'); /* 字體檔案的路徑和格式 */
+    src: url('../font/MengNaChaoGangHei-1.otf') format('truetype'); /* 字體檔案的路徑和格式 */
     /* 可選：你也可以提供其他格式的字體，以確保跨瀏覽器的兼容性 */
 }
 *{
