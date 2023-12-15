@@ -71,7 +71,7 @@
                             </div>
                             <div class="member">
                                 <p>指導教授：王秀鳳、陳世昌</p>
-                                <p>組員：高鈺璇、陳芊邑、陳儀<span style="font-size: 14px;">王</span>宣、吳相禹</p>
+                                <p>組員：高鈺璇、陳芊邑、陳儀<span class="topspan">王</span>宣、吳相禹</p>
                             </div>
                         </div>
                         
@@ -137,7 +137,7 @@
                             </div>
                             <div class="email">
                                 <img src="image/mail.png" alt="">
-                                <p style="font-size: 15px;letter-spacing: 0px;">chennaomi1314520@gmail.com</p>
+                                <p class="longMail">chennaomi1314520@gmail.com</p>
                             </div>
                         </div>
                     </div>
@@ -146,7 +146,7 @@
                     <div class="memberdown">
                         <img src="image/個人照/陳儀瑄.jpg"  alt="">
                         <div>
-                            <h3>陳儀<span style="font-size: 25px;">王</span>宣</h3>
+                            <h3>陳儀<span class="downspan">王</span>宣</h3>
                             <div class="work">
                                 <img src="image/pen.png" alt="">
                                 <p>遊戲開發/腳本撰寫</p>
@@ -186,6 +186,46 @@
     <button type="button" id="BackTop" class="toTop-arrow"></button>
     
 </body>
+<style>
+    .longMail{
+        font-size: 15px;
+        letter-spacing: 0px;
+    }
+    .topspan{
+        font-size: 14px;
+    }
+    .downspan{
+        font-size: 25px;
+    }
+    @media screen and (max-width: 770px){
+        .longMail{
+            font-size: 13px;
+        }
+        .topspan{
+            font-size: 12px;
+        }
+        .downspan{
+            font-size: 17px;
+        }
+    }
+    @media screen and (max-width: 570px){
+        .longMail{
+            font-size: 7px;
+        }
+        .topspan{
+            font-size: 10px;
+        }
+        .downspan{
+            font-size: 9px;
+        }
+    }
+    @media screen and (max-width: 530px){
+        .topspan{
+            font-size: 8px;
+        }
+    }
+    
+</style>
 <script>
     $(function(){
         $('#BackTop').click(function(){ 

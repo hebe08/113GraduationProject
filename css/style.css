@@ -25,6 +25,8 @@ header{
 }
 .nav  li{
     margin: 0px 10px 0px 10px;
+    display: flex;
+    align-items: center;
 }
 .nav  li  a{
     display: flex;
@@ -434,4 +436,42 @@ header{
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+
+@media screen and (max-width: 570px){
+    .icon{
+        width: 100px;
+        height: 60px;
+    }
+    .iconR{
+        width: 55px;
+        height: 50px;
+    }
+    .nav-item.project > a{
+        font-size: 19px;
+    }
+    .nav  li{
+        margin: 5px 0px 0px 5px;
+        display: flex;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 440px){
+    .icon{
+        width: 80px;
+        height: 50px;
+    }
+    .iconR{
+        width: 45px;
+        height: 40px;
+    }
+    .nav-item.project > a{
+        font-size: 14px;
+    }
+    .nav  li{
+        margin: 5px 0px 0px 5px;
+        display: flex;
+        align-items: center;
+    }
 }

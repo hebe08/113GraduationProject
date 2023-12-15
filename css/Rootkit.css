@@ -117,7 +117,7 @@ header{
     flex-direction: column;
     align-items: start;
     width: 100%;
-    padding-top: 150px;
+    padding-top: 125px;
     letter-spacing: 2px;
 }
 .projectCon p{
@@ -137,29 +137,7 @@ header{
     width: 100%;
     margin-bottom: 40px;
 }
-@media screen and (max-width: 1150px){
-    .content{
-        flex-direction: column-reverse;
-        padding-bottom: 50px;
-    }
-    .rightContent{
-        width: 100%;
-        padding: 0px 100px 0px 100px;
-    }
-    .icons{
-        width: 100%;
-    }
-    .leftIcon{
-        width: 100%;
-        flex-direction: row;
-        justify-content: center;
-        margin-top: 15px;
-    }
-    .leftIcon > div{
-        margin: 0px 10px 0px 10px;
-    }
-    
-}
+
 .memberInfo{
     padding: 100px 50px 60px 50px;
     background-color: rgba(255, 255, 255, 0.797);
@@ -215,30 +193,7 @@ header{
     display: flex;
     flex-direction: row;
 }
-@media screen and (max-width: 987px){
-    .member{
-        flex-direction: column;
-    }
-    .photoBlock img{
-        width: 200px;
-        height: 200px;
-    }
-    .nameBlock{
-        height: 100px;
-    }
-    .nameBlock h1{
-        font-size: 45px;
-    }
-    .bgAll{
-        padding-top: 180px;
-    }
-    .member p, .hashtag p{
-        font-size: 15px;
-    }
-    .projectCon p{
-        font-size: 18px;
-    }
-}
+
 .page{
     display: flex;
     align-items: center;
@@ -255,21 +210,7 @@ header{
     transform: translateX(20px);
     transition-duration: 0.3s;
 }
-@media screen and (max-width: 1193px) {
-    .info{
-        flex-direction: column;
-        
-    }
-    .column{
-        justify-content: center;
-    }
-}
-@media screen and (max-width: 900px){
-    .page img{
-        width: 80px;
-        height: 80px;
-    }
-}
+
 .footer{
     display: flex;
     background-color: rgba(255, 255, 255, 0.797);
@@ -302,3 +243,277 @@ header{
     transition-duration: 0.3s;
 }
 .toTop-arrow:focus {outline: none;}
+
+
+@media screen and (max-width: 1193px) {
+    .info{
+        flex-direction: column;
+        
+    }
+    .column{
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 1150px){
+    .content{
+        flex-direction: column-reverse;
+        padding-bottom: 50px;
+    }
+    .rightContent{
+        width: 100%;
+        padding: 0px 100px 0px 100px;
+    }
+    .icons{
+        width: 100%;
+    }
+    .leftIcon{
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 15px;
+    }
+    .leftIcon > div{
+        margin: 0px 10px 0px 10px;
+    }
+    
+}
+@media screen and (max-width: 987px){
+    .member{
+        flex-direction: column;
+    }
+    .photoBlock img{
+        width: 200px;
+        height: 200px;
+    }
+    .nameBlock{
+        height: 100px;
+    }
+    .nameBlock h1{
+        font-size: 45px;
+    }
+    .bgAll{
+        padding-top: 180px;
+    }
+    .member p, .hashtag p{
+        font-size: 15px;
+    }
+    .projectCon p{
+        font-size: 18px;
+    }
+    .projectCon h2{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 900px){
+    .page img{
+        width: 80px;
+        height: 80px;
+    }
+}
+@media screen and (max-width: 770px){
+    .memberdown img{
+        width: 20px;
+        height:20px;
+    }
+    .memberdown > img{
+        height: 100px;
+        width: 100px;
+    }
+    .memberdown p{
+        font-size: 14px;
+        margin-bottom: 13px;
+    }
+    .memberdown h3{
+        font-size: 20px;
+        margin-bottom: 18px;
+    }
+    .page img{
+        width: 70px;
+        height: 70px;
+    }
+    .toTop-arrow{
+        width: 4rem;
+        height: 4rem;
+    }
+    .rightContent{
+        width: 100%;
+        padding: 0px 50px 0px 50px;
+    }
+}
+@media screen and (max-width: 635px){
+    .photoBlock img{
+        width: 150px;
+        height: 150px;
+    }
+    .nameBlock{
+        height: 75px;
+    }
+    .nameBlock h1{
+        font-size: 40px;
+    }
+    .bgAll{
+        padding-top: 150px;
+    }
+    .member p, .hashtag p{
+        font-size: 12px;
+    }
+    .projectCon p{
+        font-size: 17px;
+    }
+    .projectCon h2{
+        font-size: 28px;
+    }
+    .projectCon{
+        padding-top: 100px;
+    }
+    .leftIcon img{
+        width: 70px;
+        height: 70px;
+    }
+    .leftIcon{
+        margin-top: 0;
+    }
+}
+@media screen and (max-width: 570px){
+    .memberdown img{
+        width: 10px;
+        height:10px;
+    }
+    .memberdown > img{
+        height: 70px;
+        width: 70px;
+        margin-right: 0px;
+    }
+    .memberdown p{
+        font-size: 8px;
+        margin-bottom: 7px;
+    }
+    .memberdown h3{
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .page img{
+        width: 50px;
+        height: 50px;
+    }
+    .memberInfo{
+        padding: 50px 20px 30px 20px;
+    }
+    .info{
+        justify-content: space-between;
+    }
+    .toTop-arrow{
+        width: 3rem;
+        height: 3rem;
+    }
+    .footer p{
+        font-size: 8px;
+    }
+    .icon{
+        width: 100px;
+        height: 60px;
+    }
+    .iconR{
+        width: 55px;
+        height: 50px;
+    }
+    .nav-item.project > a{
+        font-size: 19px;
+    }
+    .nav  li{
+        margin: 5px 0px 0px 5px;
+        display: flex;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 530px){
+    .photoBlock img{
+        width: 110px;
+        height: 110px;
+        border-radius: 20px;
+    }
+    .nameBlock{
+        height: 60px;
+    }
+    .nameBlock h1{
+        font-size: 30px;
+        margin-bottom: 4px;
+    }
+    .bgAll{
+        padding-top: 150px;
+    }
+    .member p, .hashtag p{
+        font-size: 10px;
+    }
+    .hashtag p{
+        margin-bottom: 10px;
+    }
+    .member{
+        margin-top: 16px;
+    }
+    .member p{
+        margin-bottom: 10px;
+        margin-right: 0;
+    }
+    .projectCon p{
+        font-size: 15px;
+    }
+    .projectCon h2{
+        font-size: 26px;
+        margin-top: 40px;
+    }
+    .projectCon{
+        padding-top: 100px;
+    }
+    .rightContent{
+        padding: 0px 40px 0px 40px;
+    }
+}
+@media screen and (max-width: 440px){
+    .icon{
+        width: 80px;
+        height: 50px;
+    }
+    .iconR{
+        width: 45px;
+        height: 40px;
+    }
+    .nav-item.project > a{
+        font-size: 14px;
+    }
+    .nav  li{
+        margin: 5px 0px 0px 5px;
+        display: flex;
+        align-items: center;
+    }
+    .projectCon{
+        padding-top: 70px;
+    }
+    .projectCon p{
+        font-size: 14px;
+    }
+    .projectCon h2{
+        font-size: 22px;
+        margin-top: 40px;
+    }
+    .leftIcon img{
+        width: 40px;
+        height: 40px;
+    }
+    .content{
+        padding-bottom: 30px;
+    }
+    .projectCon img:last-child{
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 400px){
+    .page img{
+        width: 35px;
+        height: 35px;
+    }
+    .toTop-arrow{
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+}
