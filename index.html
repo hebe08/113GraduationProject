@@ -22,7 +22,7 @@
         <ul class="nav">
             <div>
                 <li class="nav-item">
-                    <a class="nav-link"  href="#" target="_blank"><div class="icon"></div></a>
+                    <a class="nav-link"  href="index.html" target="_blank"><div class="icon"></div></a>
                 </li>
             </div>
             <div>
@@ -48,15 +48,16 @@
             <div class="top">
                 <div class="icon big"></div>
                 <div class="videoBG">
-                    <img src="image/影片背景.PNG" alt="">
-                    <div class="embed-responsive embed-responsive-16by9" id="video">
+                    <!-- <img src="image/影片背景.PNG" class="img-fluid" alt="Responsive image"> -->
+                    <div class="imagevideo"></div>
+                    <div>
                         <iframe  width="560" height="315" src="https://www.youtube.com/embed/B3FchQ9ta0U?si=20FSA_n8aL8uyVD2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
+                    
+                    
                 </div>
                 <a href="#"><div class="iconR ig content"></div></a>
                 <a href="#"><div class="iconR fb content"></div></a>
-                <a href="#"><div class="circle"></div></a>
-                
             </div>
         </section>
         
@@ -64,7 +65,8 @@
             <div class="left">
                 <div class="textL">
                     <a href="#run1">PROJECT</a><br><br>
-                    <a href="#run2">EXHIBITION</a>
+                    <a href="#run2">EXHIBITION</a><br>
+                    <img src="image/down-arrow1.png" alt="">
                 </div>
             </div>
             <div class="right">
@@ -178,10 +180,23 @@
             <p>© 2024 NCYU DEDM Graduation</p>
         </footer>
     </div>
-    
+    <button type="button" id="BackTop" class="toTop-arrow"></button>
     
 </body>
-
+<script>
+    $(function(){
+        $('#BackTop').click(function(){ 
+            $('html,body').animate({scrollTop:0}, 333);
+        });
+        $(window).scroll(function() {
+            if ( $(this).scrollTop() > 300 ){
+                $('#BackTop').fadeIn(222);
+            } else {
+                $('#BackTop').stop().fadeOut(222);
+            }
+        }).scroll();
+    });
+</script>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="js/script.js"></script>

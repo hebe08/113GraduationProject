@@ -1,11 +1,13 @@
 @font-face {
     font-family: 'MyCustomFont';
-    src: url('../font/MengNaChaoGangHei-1.otf') format('truetype'); /* 字體檔案的路徑和格式 */
+    src: url('../font/MengNaChaoGangHei-1.otf') format('opentype'); /* 字體檔案的路徑和格式 */
     /* 可選：你也可以提供其他格式的字體，以確保跨瀏覽器的兼容性 */
 }
 *{
-    font-family: 'MyCustomFont', sans-serif;
+    font-family: 'MyCustomFont', 'Arial', '微軟正黑體';
+    scroll-behavior: smooth;
 }
+
 header{
     background-color: rgba(194, 226, 254, 0.648);
     position: fixed;
@@ -82,7 +84,7 @@ header{
 
 .icon.big{
     position: absolute;
-    width: 550px;
+    width: 600px;
     height: 300px;
     top: 0;
     right: 160px;
@@ -90,42 +92,122 @@ header{
 .iconR.ig.content{
     position: absolute;
     right: 220px;
-    top: 43vh;
+    top: 68vh;
     width: 110px;
     height: 100px;
 }
 .iconR.fb.content{
     position: absolute;
-    right: 100px;
-    top: 53vh;
+    right: 220px;
+    top: 83vh;
     width: 110px;
     height: 100px;
 }
 .videoBG{
-    width: 60%;
-    top: 75px;
+    width: 75%;
+    height: 75%;
+    top: 180px;
     position: absolute;
+    margin-left: 40px;
 }
-.videoBG img{
-    
-    
+/* .videoBG img{
+    width: 100%;
+    height: 100%;
+} */
+.videoBG > div:last-child{
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
 }
-#video{
+.videoBG iframe{
+    /* position: absolute; */
+    /* top: 230px;
+    left: 26vw; */
     position: absolute;
-    top: 230px;
-    left: 26vw;
-    width: 65%;
+    top: -67vh;
+    left: 2vw;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transform: scale(0.42);
 }
-.circle{
-    position: absolute;
-    width: 200px;
-    height:200px;
-    top: 63vh;
-    right: 210px;
-    border-radius: 50%;
-    background-color: rgb(26, 26, 82);
+.imagevideo{
+    background-image: url(../image/影片背景.PNG);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
 }
+@media screen and (max-width: 1155px){
+    .videoBG iframe{
+        transform: scale(0.5);
+        left: 12vw;
+        top: -62vh;
+    }
+    .top > a:nth-child(3), .top > a:nth-child(4){
+        visibility: hidden;
+    }
+}
+@media screen and (max-width: 1030px){
+    .icon.big{
+        width: 450px;
+        top: 50px;
+        right: 160px;
+        background-size: contain;
 
+    }
+}
+@media screen and (max-width: 890px){
+    .icon.big{
+        width: 370px;
+        top: 70px;
+        right: 160px;
+    }
+}
+@media screen and (max-width: 872px){
+    .videoBG iframe{
+        transform: scale(0.5);
+        left: 12vw;
+        top: -64vh;
+    }
+}
+@media screen and (max-width: 890px){
+    .icon.big{
+        width: 370px;
+        top: 70px;
+        right: 140px;
+    }
+}
+@media screen and (max-width: 780px){
+    .icon.big{
+        width: 300px;
+        top: 100px;
+        right: 120px;
+    }
+}
+@media screen and (max-width: 730px){
+    .videoBG iframe{
+        transform: scale(0.5);
+        left: 12vw;
+        top: -66vh;
+    }
+}
+@media screen and (max-width: 655px){
+    .icon.big{
+        top: 80px;
+        right: 80px;
+    }
+    .videoBG iframe{
+        transform: scale(0.5);
+        left: 12vw;
+        top: -67.5vh;
+    }
+    #s1{
+        height: 600px;
+    }
+}
 #s2{
     width: 100%;
     height: auto;
@@ -157,7 +239,32 @@ header{
     color: white;
 }
 .left a:hover{
-    text-decoration: underline;
+    transition-duration: 0.2s;
+    filter: drop-shadow(0px 0px 10px #ffffffc3);
+}
+.left img{
+    width: 50px;
+    height: 50px;
+    animation-name: arrowDown;
+    animation-delay: 0.3s;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    position: relative;
+    visibility: hidden;
+}
+@keyframes arrowDown{
+    0%{
+        padding-top: 0px;
+        top: 0;
+    }
+    50%{
+        padding-top: 20px;
+        top: 15px;
+    }
+    100%{
+        padding-top: 0px;
+    }
 }
 .cards{
     display: flex;
@@ -280,7 +387,7 @@ header{
     font-size: 22px;
 }
 .cards > a > div:nth-child(7)::before{
-    content: '#數位教材 #化學網頁';
+    content: '#數位教材 #化學教材';
     left: 20px;
     font-size: 12px;
 }
@@ -437,8 +544,115 @@ header{
     height: 100%;
     object-fit: cover;
 }
+.toTop-arrow {
+	width: 5rem;
+	height: 5rem;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	/* border-radius: 33%; */
+    background: transparent;
+	opacity: 0.5;
+	background-image: url(../image/top.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+	cursor: pointer;
+	position:fixed;
+	right: 1rem;
+	bottom: 1rem;
+	display: none;
+}
+.toTop-arrow:hover{
+    opacity: 1;
+    transition-duration: 0.3s;
+}
+.toTop-arrow:focus {outline: none;}
 
-
+@media screen and (max-width: 1143px){
+    .exhtext h1{
+        font-size: 90px;
+    }
+    .exhtext h2{
+        font-size: 16px;
+    }
+    .detail img{
+        height: 20px;
+        width: 20px;
+    }
+}
+@media screen and (max-width: 1033px){
+    #s2{
+        flex-direction: column;
+    }
+    .left{
+        width: 100%;
+        padding-top: 100px;
+    }
+    .left img{
+        visibility: visible;
+    }
+    .left > div{
+        width: 100%;
+    }
+    .left > div a{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(160, 183, 194, 0.486);
+        padding: 5px 0px;
+        box-shadow: 0 0 5px 10px rgba(160, 183, 194, 0.486);
+    }
+    .left a:hover{
+        background-color: rgba(165, 193, 206, 0.563);
+        box-shadow: 0 0 5px 10px rgbargba(165, 193, 206, 0.563);
+        color: rgba(255, 255, 255, 0.797);
+        text-decoration: none;
+    }
+    .right{
+        width: 100%;
+        padding-top: 30px;
+    }
+    .intro img {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 779px){
+    .cards{
+        /* justify-content: center; */
+        padding: 50px;
+    }
+    .left{
+        padding-top: 0;
+    }
+    .left > div a{
+        font-size: 26px;
+    }
+    .cards > a > div img{
+        width: 140px;
+        height: 140px;
+    }
+    .exhibit{
+        padding: 60px;
+    }
+    
+}
+@media screen and (max-width: 748px){
+    .exhtext h1{
+        font-size: 70px;
+    }
+    .exhtext h2{
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+    .detail img{
+        height: 15px;
+        width: 15px;
+    }
+    .detail > div{
+        margin-bottom: 3px;
+    }
+}
 @media screen and (max-width: 570px){
     .icon{
         width: 100px;
@@ -455,6 +669,72 @@ header{
         margin: 5px 0px 0px 5px;
         display: flex;
         align-items: center;
+    }
+    .left > div a{
+        font-size: 22px;
+    }
+    .cards > a > div img{
+        width: 110px;
+        height: 110px;
+    }
+    .cards{
+        padding: 30px 20px;
+    }
+    
+}
+@media screen and (max-width: 550px){
+    .exhtext h1{
+        font-size: 55px;
+    }
+    .exhtext h2{
+        font-size: 10px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .detail img{
+        height: 12px;
+        width: 12px;
+    }
+    .detail{
+        margin-bottom: 4px;
+    }
+    .detail > div{
+        margin-bottom: 13px;
+        display: flex;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 502px){
+    .cards > a > div img{
+        width: 90px;
+        height: 90px;
+    }
+    .cards{
+        padding: 30px 10px;
+    }
+}
+@media screen and (max-width: 470px){
+    .exhtext h1{
+        font-size: 42px;
+    }
+    .exhtext h2{
+        font-size: 10px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .detail img{
+        height: 10px;
+        width: 10px;
+        margin-right: 5px;
+    }
+    .detail{
+        margin-bottom: 2px;
+    }
+    .detail > div{
+        margin-bottom: 10px;
+    }
+    .exhibit{
+        padding: 40px 40px 70px 40px;
     }
 }
 @media screen and (max-width: 440px){
@@ -473,5 +753,19 @@ header{
         margin: 5px 0px 0px 5px;
         display: flex;
         align-items: center;
+    }
+    .left > div a{
+        font-size: 18px;
+    }
+    .intro img {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 382px){
+    .cards{
+        justify-content: center;
+    }
+    .exhtext h1{
+        font-size: 40px;
     }
 }
