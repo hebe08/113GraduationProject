@@ -208,6 +208,43 @@ header{
         height: 600px;
     }
 }
+@media screen and (max-width: 560px){
+    .icon.big{
+        width: 320px;
+        top: 70px;
+        right: 0px;
+    }
+    .videoBG{
+        width: 90%;
+        height: 90%;
+        margin-left: 20px;
+    }
+    .videoBG iframe{
+        transform: scale(0.5);
+        left: 15vw;
+        top: -82vh;
+    }
+}
+@media screen and (max-width: 480px){
+    .icon.big{
+        width: 250px;
+        top: 80px;
+        right: 0px;
+    }
+    .videoBG{
+        width: 90%;
+        height: 90%;
+        margin-left: 20px;
+    }
+    .videoBG iframe{
+        transform: scale(0.5);
+        left: 15vw;
+        top: -84vh;
+    }
+    #s1{
+        height: 550px;
+    }
+}
 #s2{
     width: 100%;
     height: auto;
@@ -303,6 +340,7 @@ header{
     opacity: 0;
     letter-spacing: 3px;
     top: 70px;
+    font-size: 22px;
 }
 .cards > a > div::before{
     position: absolute;
@@ -312,138 +350,139 @@ header{
     letter-spacing: 3px;
     top: 105px;
     opacity: 0;
+    font-size: 12px;
 }
-.cards > a > div:nth-child(1)::after{
+.cards > a:nth-child(1) > div::after{
     content: 'TCG藝術家';
     left: 31px;
     font-size: 22px;
 }
-.cards > a > div:nth-child(1)::before{
+.cards > a:nth-child(1) > div::before{
     content: '#藝術家 #TCG卡牌';
     left: 28px;
     font-size: 12px;
 }
-.cards > a > div:nth-child(2)::after{
+.cards > a:nth-child(2) > div::after{
     content: '你來See SEA';
     left: 16px;
     font-size: 20px;
 }
-.cards > a > div:nth-child(2)::before{
+.cards > a:nth-child(2) > div::before{
     content: '#東南亞 #遊戲';
     left: 40px;
     font-size: 12px;
     top: 102px;
 }
-.cards > a > div::after{
+.cards > a:nth-child(3) > div:after{
     content: 'Rootkit';
     left: 36px;
     top: 67px;
     font-size: 26px;
 }
-.cards > a > div::before{
+.cards > a:nth-child(3) > div:before{
     content: '#解謎遊戲 #駭客';
     left: 38px;
     font-size: 12px;
 }
-.cards > a > div:nth-child(4)::after{
+.cards > a:nth-child(4) > div::after{
     content: '水落石出';
     left: 38px;
     top: 67px;
     font-size: 27px;
 }
-.cards > a > div:nth-child(4)::before{
+.cards > a:nth-child(4)> div::before{
     content: '#實境解謎 #化石知識';
     left: 22px;
     top: 107px;
     font-size: 12px;
 }
-.cards > a > div:nth-child(5)::after{
+.cards > a:nth-child(5) > div::after{
     content: '甲蟲大小飼';
     left: 25px;
     top: 67px;
     font-size: 26px;
 }
-.cards > a > div:nth-child(5)::before{
+.cards > a:nth-child(5) > div::before{
     content: '#甲蟲電子書 #新手入門須知';
     left: 7px;
     top: 107px;
     font-size: 11px;
 }
-.cards > a > div:nth-child(6)::after{
+.cards > a:nth-child(6) > div::after{
     content: 'HTH';
     left: 65px;
     top: 67px;
     font-size: 27px;
 }
-.cards > a > div:nth-child(6)::before{
+.cards > a:nth-child(6) > div::before{
     content: '#橫幅2D遊戲 #家庭關係';
     left: 14px;
     top: 107px;
     font-size: 11px;
 }
-.cards > a > div:nth-child(7)::after{
+.cards > a:nth-child(7) > div::after{
     content: 'ChemIsTry';
     left: 20px;
     font-size: 22px;
 }
-.cards > a > div:nth-child(7)::before{
+.cards > a:nth-child(7) > div::before{
     content: '#數位教材 #化學教材';
     left: 20px;
     font-size: 12px;
 }
-.cards > a > div:nth-child(8)::after{
+.cards > a:nth-child(8) > div::after{
     content: '最後的島嶼';
     left: 26px;
     top: 67px;
     font-size: 26px;
 }
-.cards > a > div:nth-child(8)::before{
+.cards > a:nth-child(8) > div::before{
     content: '#桌遊 #全球暖化';
     left: 37px;
     top: 107px;
     font-size: 12px;
 }
-.cards > a > div:nth-child(9)::after{
+.cards > a:nth-child(9) > div::after{
     content: '海洋文明的嘆息';
     left: 16px;
     font-size: 20px;
 }
-.cards > a > div:nth-child(9)::before{
+.cards > a:nth-child(9) > div::before{
     content: '#海洋汙染 #橫向RPG遊戲';
     left: 12px;
     font-size: 11px;
 }
-.cards > a > div:nth-child(10)::after{
+.cards > a:nth-child(10) > div::after{
     content: '祈虎';
     left: 65px;
     top: 67px;
     font-size: 27px;
 }
-.cards > a > div:nth-child(10)::before{
+.cards > a:nth-child(10) > div::before{
     content: '#民間信仰 #本土文化';
     left: 22px;
     top: 107px;
     font-size: 12px;
 }
-.cards > a > div:nth-child(11)::after{
+.cards > a:nth-child(11) > div::after{
     content: '噓你貨幣';
     left: 38px;
     top: 67px;
     font-size: 27px;
 }
-.cards > a > div:nth-child(11)::before{
+.cards > a:nth-child(11) > div::before{
     content: '#虛擬貨幣 #動畫影片';
     left: 22px;
     top: 107px;
     font-size: 12px;
 }
-.cards > a > div:nth-child(12)::after{
+.cards > a:nth-child(12) > div::after{
     content: '漫步雲端';
     left: 38px;
     top: 67px;
     font-size: 27px;
 }
-.cards > a > div:nth-child(12)::before{
+.cards > a:nth-child(12) > div::before{
     content: '#360環景 #多媒體互動平台';
     left: 5px;
     top: 107px;
@@ -632,6 +671,24 @@ header{
         width: 140px;
         height: 140px;
     }
+    .cards > a:nth-child(n+1):nth-child(-n+12) > div::after{
+        width: 140px;
+        height: 140px;
+        top: 50px;
+        left: 10px;
+        font-size: 16px;
+        padding-right: 5px;
+
+    }
+    .cards > a:nth-child(n+1):nth-child(-n+12) > div::before{
+        width: 140px;
+        height: 140px;
+        letter-spacing: 3px;
+        top: 85px;
+        left: 10px;
+        font-size: 10px;
+        padding-right: 5px;
+    }
     .exhibit{
         padding: 60px;
     }
@@ -677,10 +734,30 @@ header{
         width: 110px;
         height: 110px;
     }
+    .cards > a:nth-child(n+1):nth-child(-n+12) > div::after{
+        width: 110px;
+        height: 110px;
+        top: 40px;
+        left: 10px;
+        font-size: 14px;
+        padding-right: 5px;
+
+    }
+    .cards > a:nth-child(n+1):nth-child(-n+12) > div::before{
+        width: 110px;
+        height: 110px;
+        letter-spacing: 3px;
+        top: 65px;
+        left: 10px;
+        font-size: 8px;
+        padding-right: 5px;
+    }
     .cards{
         padding: 30px 20px;
     }
-    
+    .cards > a > div{
+        margin: 30px;
+    }
 }
 @media screen and (max-width: 550px){
     .exhtext h1{
@@ -705,10 +782,6 @@ header{
     }
 }
 @media screen and (max-width: 502px){
-    .cards > a > div img{
-        width: 90px;
-        height: 90px;
-    }
     .cards{
         padding: 30px 10px;
     }
