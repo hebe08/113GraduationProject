@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'Klaxons';
+    src: url('../Klaxons.woff') format('woff'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+    url('../Klaxons.woff') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+  }
+
+  .bg{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url("../image/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#loading{
+    position: fixed;
+    width:100%;
+    height: 100%;
+    z-index:999;
+    background-image: url("../image/ttcopy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#loading .percent,#loading img,#loading .loading_txt{
+    float:left;
+    /* margin: auto; */
+    position: absolute;
+    margin: auto;
+    display: block;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    color:#fff;
+    font-family: 'Klaxons';
+    text-align: center;
+}
+
+#loading img{
+    bottom:20%;
+    width: 80%;
+    animation: rotate_ball 4s;
+    transform: rotate(360deg);
+}
+
+#loading .percent{
+    height: 10%;
+    bottom:13%;
+    font-size: 9vw;
+}
+
+#loading .loading_txt{
+    /* bottom:15%; */
+    height: 20%;
+    font-weight: lighter;
+    top:50%;
+    width: 50%;
+    font-size: 9vw;
+    letter-spacing: 0.5vw;
+    transform: skewX(340deg);
+    color:#F4CE1F;
+    text-align: left;
+}
+
+@keyframes rotate_ball {
+    0%{
+        transform: rotate(0deg);
+    }
+    60%{
+        /* transform: rotate(180deg); */
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+#loading .loading_txt::after{
+    content:"LOADING.....";
+    animation: count 4s;
+}
+
+@keyframes count {
+    0%{
+        content:"L"
+    }
+    20%{
+        content:"LO"
+    }
+    30%{
+        content:"LOA"
+    }
+    40%{
+        content:"LOAD"
+    }
+    50%{
+        content:"LOADI"
+    }
+    60%{
+        content:"LOADIN"
+    }
+    70%{
+        content:"LOADING."
+    }
+    80%{
+        content:"LOADING.."
+    }
+    90%{
+        content:"LOADING..."
+    }
+    100%{
+        content:"LOADING....."
+    }
+}
+
+@media (min-width:900px) {
+
+    #loading img{
+        width: 20%;
+    }
+
+    #loading .loading_txt{
+        width:20%;
+        font-size: 3vw;
+    }
+
+    #loading .percent{
+        font-size: 2vw;
+    }
+
+    .bg{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: url("../visual_picture/bg.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}

@@ -1,5 +1,13 @@
 header{
     top: 0;
+    position: fixed;
+}
+#clickMenu{
+    color: white;
+}
+#clickMenu:hover{
+    color: rgb(13, 50, 114);
+    cursor: pointer;
 }
 .bgAll{
     padding-top: 160px;

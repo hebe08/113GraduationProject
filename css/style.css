@@ -7,7 +7,40 @@
     font-family: 'MyCustomFont', 'Arial', '微軟正黑體';
     scroll-behavior: smooth;
 }
+ul{
+    margin-bottom: 0 !important; 
+}
+/* #menu{
+    position: fixed;
+    height: 0%;
+    width: 100%;
+    z-index: 3;
+    display: none;
+    transition: height 0.3s ease;
+    overflow: hidden;
+} */
+#mynav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: height 0.3s ease;
+    z-index: 3;
+}
 
+/* 菜单内容样式 */
+#menu-content {
+    background-color: white;
+    border-radius: 0 0 5px 5px;
+}
+
+/* 显示菜单时的高度 */
+#mynav.active {
+    height: 100%; /* 根据实际内容设置合适的高度 */
+}
 header{
     background-color: rgba(194, 226, 254, 0.648);
     position: fixed;
@@ -16,25 +49,30 @@ header{
     transition: top 0.3s ease;
     top: -100px;
 }
-.nav{
+.navIndex{
     display: flex;
     justify-content: space-between;
 }
-.nav div{
+.navIndex div{
     flex-direction: row;
     display: flex;
     flex-wrap: wrap;
 }
-.nav  li{
+.navIndex  li{
     margin: 0px 10px 0px 10px;
     display: flex;
     align-items: center;
 }
-.nav  li  a{
+.navIndex  li  a{
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0px 5px 0px 5px;
+}
+.navIndex li:nth-child(n+2):nth-child(-n+4) a:hover{
+    transition-duration: 1s;
+    filter: drop-shadow(0px 0px 10px #ffffff87);
+    opacity: 0.7;
 }
 .nav-item.project > a{
     text-align: center;
@@ -43,10 +81,14 @@ header{
     font-size: 22px;
     color: rgb(255, 255, 255);
 }
+.nav-item.project > a:hover{
+    color: rgb(13, 50, 114);
+    cursor: pointer;
+}
 .icon{
     background: url(../image/畢展主視覺標題文字.png);
     width: 120px;
-    height: 70px;
+    height: 80px;
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -103,6 +145,10 @@ header{
     width: 110px;
     height: 100px;
 }
+.iconR.ig.content:hover, .iconR.fb.content:hover{
+    transition-duration: 0.2s;
+    filter: drop-shadow(0px 0px 10px #ffffffc3);
+}
 .videoBG{
     width: 75%;
     height: 75%;
@@ -156,7 +202,7 @@ header{
         top: 50px;
         right: 160px;
         background-size: contain;
-
+        
     }
 }
 @media screen and (max-width: 890px){
@@ -341,6 +387,7 @@ header{
     letter-spacing: 3px;
     top: 70px;
     font-size: 22px;
+    visibility: hidden;
 }
 .cards > a > div::before{
     position: absolute;
@@ -351,6 +398,7 @@ header{
     top: 105px;
     opacity: 0;
     font-size: 12px;
+    visibility: hidden;
 }
 .cards > a:nth-child(1) > div::after{
     content: 'TCG藝術家';
@@ -489,10 +537,12 @@ header{
     font-size: 11px;
 }
 .cards > a > div:hover::after{
+    visibility: visible;
     opacity: 1;
     transition-duration: 0.5s;
 }
 .cards > a > div:hover::before{
+    visibility: visible;
     opacity: 1;
     transition-duration: 0.5s;
 }
@@ -584,22 +634,22 @@ header{
     object-fit: cover;
 }
 .toTop-arrow {
-	width: 5rem;
-	height: 5rem;
-	padding: 0;
-	margin: 0;
-	border: 0;
-	/* border-radius: 33%; */
+    width: 5rem;
+    height: 5rem;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    /* border-radius: 33%; */
     background: transparent;
-	opacity: 0.5;
-	background-image: url(../image/top.png);
+    opacity: 0.5;
+    background-image: url(../image/top.png);
     background-size: cover;
     background-repeat: no-repeat;
-	cursor: pointer;
-	position:fixed;
-	right: 1rem;
-	bottom: 1rem;
-	display: none;
+    cursor: pointer;
+    position:fixed;
+    right: 1rem;
+    bottom: 1rem;
+    display: none;
 }
 .toTop-arrow:hover{
     opacity: 1;
@@ -678,7 +728,7 @@ header{
         left: 10px;
         font-size: 16px;
         padding-right: 5px;
-
+        
     }
     .cards > a:nth-child(n+1):nth-child(-n+12) > div::before{
         width: 140px;
@@ -725,7 +775,7 @@ header{
     .nav-item.project > a{
         font-size: 19px;
     }
-    .nav  li{
+    .navIndex  li{
         margin: 5px 0px 0px 5px;
         display: flex;
         align-items: center;
@@ -744,7 +794,7 @@ header{
         left: 10px;
         font-size: 14px;
         padding-right: 5px;
-
+        
     }
     .cards > a:nth-child(n+1):nth-child(-n+12) > div::before{
         width: 110px;
@@ -770,7 +820,7 @@ header{
     .cards > a:nth-child(2) > div::after{
         top: 20px;
         left: 10px;
-
+        
     }
     .cards > a:nth-child(2) > div::before{
         top: 65px;
@@ -841,7 +891,7 @@ header{
     .nav-item.project > a{
         font-size: 14px;
     }
-    .nav  li{
+    .navIndex  li{
         margin: 5px 0px 0px 5px;
         display: flex;
         align-items: center;
