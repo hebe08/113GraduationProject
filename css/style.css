@@ -232,6 +232,9 @@ header{
         top: 100px;
         right: 120px;
     }
+    .navIndex{
+        padding-left: 0;
+    }
 }
 @media screen and (max-width: 730px){
     .videoBG iframe{
