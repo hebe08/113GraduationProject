@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -19,9 +20,60 @@
     <link rel="stylesheet" href="css/loading.css">
     <!-- Main style CSS -->
     <link rel="stylesheet" href="css/style.css" />
+    <style>
+    .loading-wrapper{
+        position:fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #02042b;
+        z-index: 9999;
+
+    }
+    #mainContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: calc(100% - 100px); 
+    margin-top: -75px; 
+    padding-bottom: 100px; 
+}
+
+#loadingContainer, #batteryContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#loadingImage {
+    transform: scale(0.6); 
+}
+#batteryContainer {
+        margin-top: -100px;
+}
+    </style>
 </head>
 <body>
     <!-- 菜單 -->
+    <div class="loading-wrapper">
+        <div id="mainContainer">
+            <div id="loadingContainer">
+                <img id="loadingImage" src="_0000.png" alt="Loading...">
+            </div>
+            <div id="batteryContainer">
+                <img id="batteryImage" src="電池/0.png" alt="Battery Status">
+            </div>
+        </div>
+        <script src="js/loading.js"></script> 
+        <script>
+            $(document).ready(function(){
+                setTimeout(function(){
+                    $(".loading-wrapper").fadeOut(1000);
+                }, 3200);
+            });
+        </script>
+    </div>
     <div id="menu">
         <div id="menu-content">
             <div id="mynav" class="push">
